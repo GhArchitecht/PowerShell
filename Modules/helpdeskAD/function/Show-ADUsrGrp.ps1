@@ -1,8 +1,25 @@
-﻿<#
-
-#>
-function Get-ADUsrMgr
+﻿function Show-ADUsrGrp
 {
+
+ <#
+    .SYNOPSIS
+        Short description here
+
+    .DESCRIPTION
+        Longer description here
+
+    .PARAMETER $parameterName
+        Parameter description goes here
+
+    .INPUT
+        This function does not support piping.
+
+    .OUTPUT
+        Name what the function returns if any.
+
+    .EXAMPLE
+        Write an example of the function here
+    #>
     [CmdletBinding()]
     param (
         [string]$usr
@@ -26,6 +43,5 @@ function Get-ADUsrMgr
             return $null
           }
 
-    
-        Get-ADUser -identity $usr -Properties * | FL Name, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}
+    Get-ADPrincipalGroupMembership $usr | Select name
 }

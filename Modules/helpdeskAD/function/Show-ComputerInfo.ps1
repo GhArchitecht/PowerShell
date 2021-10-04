@@ -1,6 +1,5 @@
-﻿function Get-Template 
+﻿function Show-ComputerProfile
 {
-
     <#
     .SYNOPSIS
         Short description here
@@ -21,11 +20,5 @@
         Write an example of the function here
     #>
 
-     [cmdletBinding()]
-            param (
-            [string]$usr
-            )
-    
-        Write-Output "This is a function used as a template to create new functions"
-    
+
 }

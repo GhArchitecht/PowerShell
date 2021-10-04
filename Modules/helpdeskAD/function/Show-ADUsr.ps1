@@ -1,4 +1,4 @@
-﻿function Get-ADUsr 
+﻿function Show-ADUsr 
 {
     [CmdletBinding()]
         param (

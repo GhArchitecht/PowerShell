@@ -1,4 +1,4 @@
-﻿function Set-ADUsrPwd
+﻿function Reset-ADUsrPwd
 {
     [CmdletBinding()]
         # Add a parameter called username.

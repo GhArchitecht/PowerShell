@@ -1,6 +1,3 @@
-<# 
- # Modify the manager property of an Active Directory user. 
- #>
 function Set-ADUsrMgr 
 {
     <#
@@ -25,6 +22,7 @@ function Set-ADUsrMgr
     .EXAMPLE
         Set-ADUsrMgr -usr $username -mgr $managername
     #>
+
     [cmdletBinding()]
         param (
         [string]$usr,[string]$mgr

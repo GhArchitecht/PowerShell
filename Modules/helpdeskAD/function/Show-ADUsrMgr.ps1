@@ -1,7 +1,4 @@
-﻿<#
-
-#>
-function Get-ADUsrGroup
+﻿function Show-ADUsrMgr
 {
     [CmdletBinding()]
     param (
@@ -26,5 +23,6 @@ function Get-ADUsrGroup
             return $null
           }
 
-    Get-ADPrincipalGroupMembership $usr | Select name
+    
+        Get-ADUser -identity $usr -Properties * | FL Name, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}
 }
