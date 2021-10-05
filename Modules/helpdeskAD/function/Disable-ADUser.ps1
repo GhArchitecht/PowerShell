@@ -34,9 +34,9 @@ function Disable-ADUsr
 
 
             #if value is false, show message and exit the script
-            if ($result -eq 'false') {
-                 Write-Host $usr " : has been disabled"
-                 return $null
+            if ($result -eq $false) {
+                 Write-Ouput $usr "account has been disabled"
+                 
             }
        
 }

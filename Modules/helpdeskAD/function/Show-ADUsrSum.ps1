@@ -1,4 +1,4 @@
-﻿function Get-ADUsrSum {
+﻿function Show-ADUsrSum {
 
  [CmdletBinding()]
         param (

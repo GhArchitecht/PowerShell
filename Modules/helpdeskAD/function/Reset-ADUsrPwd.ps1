@@ -54,7 +54,7 @@
          }
          # If the password reset failed, show a message and exit the script.
          catch {
-             Write-Host "There was an error performing the password reset. Please consult the error below."
+             Write-Output "There was an error performing the password reset. Please consult the error below."
              Get-ErrorMessage;
              #Write-host $_.Exception.Message
              return $null

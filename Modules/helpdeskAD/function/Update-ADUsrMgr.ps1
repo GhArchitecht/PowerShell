@@ -1,4 +1,4 @@
-function Set-ADUsrMgr 
+function Update-ADUsrMgr 
 {
     <#
     .SYNOPSIS
@@ -39,6 +39,6 @@ function Set-ADUsrMgr
         Set-ADuser -Identity $usr -Manager $mgr
 
         #Gets a specified users managers name
-        Get-ADUsrMgr $usr
+        Show-ADUsrMgr $usr
     
 }

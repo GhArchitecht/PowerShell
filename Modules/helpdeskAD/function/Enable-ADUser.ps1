@@ -37,7 +37,7 @@ function Enable-ADUsr
 
          #if value is false, show message and exit the script
           if ($result -eq 'true') {
-                 Write-Host $usr " account has been enabled"
+                 Write-Output $usr " account has been enabled"
                  return $null
             }
        
