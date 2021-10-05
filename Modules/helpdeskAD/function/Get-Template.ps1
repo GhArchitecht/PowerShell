@@ -1,6 +1,5 @@
 ﻿function Get-Template 
 {
-
     <#
     .SYNOPSIS
         Short description here

@@ -32,5 +32,5 @@
         Set-ADAccountExpiration -Identity $usr -DateTime $newExp
 
         #Gets a users 
-        Get-ADuser -identity $usr -Properties * | FL GivenName, Surname, AccountExpirationDate
+        Get-ADuser -identity $usr -Properties * | Format-List GivenName, Surname, AccountExpirationDate
     }

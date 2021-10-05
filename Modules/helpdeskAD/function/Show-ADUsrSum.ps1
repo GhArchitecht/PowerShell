@@ -1,6 +1,28 @@
-﻿function Show-ADUsrSum {
+<<<<<<< HEAD:Modules/helpdeskAD/function/Show-ADUsrSum.ps1
+function Show-ADUsrSum {
+    <#
+        .SYNOPSIS
+            Short description here
+>>>>>>> ac451bb7b953f6b487bf10846ca69b7fba831880:Modules/helpdeskAD/function/Get-ADUsrSum.ps1
 
- [CmdletBinding()]
+        .DESCRIPTION
+            Longer description here
+
+        .PARAMETER $parameterName
+            Parameter description goes here
+
+        .INPUT
+            This function does not support piping.
+
+        .OUTPUT
+            Name what the function returns if any.
+
+        .EXAMPLE
+            Write an example of the function here
+        #>
+
+
+        [CmdletBinding()]
         param (
             [string]$usr
         )

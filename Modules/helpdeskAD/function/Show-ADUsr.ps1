@@ -26,7 +26,7 @@
            
             
        #Get-AdUser -Filter {anr -like $usr} -Properties * | FT @{Label= 'FirstName'; E={$_.GivenName}}, Surname, @{Label='AccountName'; E={$_.SamAccountName}}, EmailAddress, Department, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}, Country, EmployeeType, Created, AccountExpirationDate,Enabled, Deleted, @{Label= 'invalidLoginCount'; E={$_.BadLogonCount}}, @{Label= 'invalidPwdCount'; E={$_.BadPasswordCount}}, LastBadPasswordattempt, PasswordLastSet,@{N='Memberof';E={(Get-ADUser $_.Memberof).distinguishedName}}
-       Get-ADUser -identity $usr -Properties * | FL GivenName, Surname, SamAccountName, EmailAddress, Department, co, Country, EmployeeType,  @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}},
+       Get-ADUser -identity $usr -Properties * | Format-List GivenName, Surname, SamAccountName, EmailAddress, Department, co, Country, EmployeeType,  @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}},
        BadLogonCount, BadPasswordCount, Created, LastBadPasswordattempt, PasswordLastSet, PasswordNeverExpires, AccountExpirationDate, Memberof,Enabled, Deleted #@{N='Memberof';E={(Get-ADUser $_.Memberof).distinguishedName}}
 
     <#    [array]$usrList =   Get-AdUser -Filter {anr -like $usr} -Properties * | FT @{Label= 'FirstName'; E={$_.GivenName}}, Surname, @{Label='AccountName'; E={$_.SamAccountName}}, EmailAddress, Department, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}, Country
