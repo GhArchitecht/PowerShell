@@ -1,5 +1,25 @@
 ﻿# Returns UserPrincipalName, First Name and Display Name as $Upn, $FName and $DName to be used elsewhere in a script
-Function Find-AdUser ($Uinput) { 
+function Find-AdUser ($Uinput) {
+	     <#
+        .SYNOPSIS
+            Short description here
+
+        .DESCRIPTION
+            Longer description here
+
+        .PARAMETER $parameterName
+            Parameter description goes here
+
+        .INPUT
+            This function does not support piping.
+
+        .OUTPUT
+            Name what the function returns if any.
+
+        .EXAMPLE
+            Write an example of the function here
+        #>
+	
 	If (-not ($UInput) ){
 		# Enter part of name
 		$Uinput = Read-Host -prompt "Enter part of a users name to find"
@@ -35,7 +55,7 @@ Function Find-AdUser ($Uinput) {
 			$format = 	@{Label="Number"; Expression={If($_.number % 2){[console]::ForegroundColor="white";$_.number}Else{[console]::ForegroundColor="cyan";$_.number}}; width=15; Alignment="center"},
 					@{Label="Name"; Expression={$_.name}; width=30},
 					@{Label="Email Address"; Expression={$_.email}; width=50}
-			$results | ft $format
+			$results | Format-Table $format
 			$Host.UI.RawUI.ForegroundColor = $originalColor
 			# Prompt for a choice from the above results
 			$Uchoice = Read-Host -prompt `n"Enter a number from above"

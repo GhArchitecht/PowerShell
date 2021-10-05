@@ -1,9 +1,26 @@
-﻿<#
-
-#>
-function Enable-ADUsr 
+﻿function Enable-ADUsr 
 {
-    [CmdletBinding()]
+         <#
+        .SYNOPSIS
+            Short description here
+
+        .DESCRIPTION
+            Longer description here
+
+        .PARAMETER $parameterName
+            Parameter description goes here
+
+        .INPUT
+            This function does not support piping.
+
+        .OUTPUT
+            Name what the function returns if any.
+
+        .EXAMPLE
+            Write an example of the function here
+        #>
+
+        [CmdletBinding()]
     
         param (
             [string]$usr
@@ -39,6 +56,5 @@ function Enable-ADUsr
           if ($result -eq 'true') {
                  Write-Host $usr " account has been enabled"
                  return $null
-            }
-       
+            }     
  }

@@ -43,5 +43,5 @@
             return $null
           }
 
-    Get-ADPrincipalGroupMembership $usr | Select name
+    Get-ADPrincipalGroupMembership $usr | Select-Object name
 }

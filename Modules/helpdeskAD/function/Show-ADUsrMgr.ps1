@@ -1,28 +1,48 @@
 ﻿function Show-ADUsrMgr
 {
-    [CmdletBinding()]
-    param (
-        [string]$usr
-        )
+      <#
+        .SYNOPSIS
+            Short description here
 
-    #If the user did not provide a username, show a a message and exit the script
-    if (-not($usr)) 
-       {
-	    Write-Host "You did not enter a username. Exiting script"
-	    return $null
-       }
+        .DESCRIPTION
+            Longer description here
 
-    #Check if theuserr exists or if the username is valid. Do not show the result on the screen.
-     try {
-           $null = Get-ADUser -Identity $usr -ErrorAction Stop
-         }
+        .PARAMETER $parameterName
+            Parameter description goes here
 
-    #if the username cannot be found , show a message and exit the script
-    catch {
-            Get-ErrorMessage
-            return $null
+        .INPUT
+            This function does not support piping.
+
+        .OUTPUT
+            Name what the function returns if any.
+
+        .EXAMPLE
+            Write an example of the function here
+      #>
+
+      [CmdletBinding()]
+      param (
+          [string]$usr
+          )
+
+      #If the user did not provide a username, show a a message and exit the script
+      if (-not($usr)) 
+        {
+        Write-Host "You did not enter a username. Exiting script"
+        return $null
+        }
+
+      #Check if theuserr exists or if the username is valid. Do not show the result on the screen.
+      try {
+            $null = Get-ADUser -Identity $usr -ErrorAction Stop
           }
 
+      #if the username cannot be found , show a message and exit the script
+      catch {
+              Get-ErrorMessage
+              return $null
+            }
+
     
-        Get-ADUser -identity $usr -Properties * | FL Name, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}
+      Get-ADUser -identity $usr -Properties * | Format-List Name, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}
 }

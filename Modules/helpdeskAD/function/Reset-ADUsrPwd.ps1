@@ -1,5 +1,25 @@
 ﻿function Reset-ADUsrPwd
 {
+    <#
+        .SYNOPSIS
+            Short description here
+
+        .DESCRIPTION
+            Longer description here
+
+        .PARAMETER $parameterName
+            Parameter description goes here
+
+        .INPUT
+            This function does not support piping.
+
+        .OUTPUT
+            Name what the function returns if any.
+
+        .EXAMPLE
+            Write an example of the function here
+    #>
+
     [CmdletBinding()]
         # Add a parameter called username.
          param (
@@ -41,7 +61,7 @@
              Set-ADuser -Identity $usr -ChangePasswordAtLogon $true
 
              #Gets the users account name and password last set
-             $passwordSet = Get-ADUser -identity $usr -Properties * | select PasswordLastSet
+             $passwordSet = Get-ADUser -identity $usr -Properties * | Select-Object PasswordLastSet
      
              # If the password reset was successfull, return the username and new password.
              [ pscustomobject ]@{
@@ -50,7 +70,6 @@
                  PasswordSetAt = $passwordSet
              }
 
-
          }
          # If the password reset failed, show a message and exit the script.
          catch {
@@ -58,7 +77,5 @@
              Get-ErrorMessage;
              #Write-host $_.Exception.Message
              return $null
-         }
-
-         
+         }       
 }
