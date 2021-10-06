@@ -1,26 +1,9 @@
-﻿function Enable-ADUsr 
+﻿<#
+
+#>
+function Enable-ADUsr 
 {
-         <#
-        .SYNOPSIS
-            Short description here
-
-        .DESCRIPTION
-            Longer description here
-
-        .PARAMETER $parameterName
-            Parameter description goes here
-
-        .INPUT
-            This function does not support piping.
-
-        .OUTPUT
-            Name what the function returns if any.
-
-        .EXAMPLE
-            Write an example of the function here
-        #>
-
-        [CmdletBinding()]
+    [CmdletBinding()]
     
         param (
             [string]$usr
@@ -49,12 +32,13 @@
 
 
         #Checks the value of the Enabled property of a user
-            $result = Get-Aduser $usr -Properties Enabled | Select-Object -ExpandProperty Enabled
+         $result = Get-Aduser $usr -Properties Enabled | Select-Object -ExpandProperty Enabled
 
 
          #if value is false, show message and exit the script
-          if ($result -eq 'true') {
+          if ($result -eq $true) {
                  Write-Output $usr " account has been enabled"
                  return $null
-            }     
+            }
+       
  }
