@@ -1,9 +1,7 @@
-<<<<<<< HEAD:Modules/helpdeskAD/function/Show-ADUsrSum.ps1
 function Show-ADUsrSum {
     <#
         .SYNOPSIS
             Short description here
->>>>>>> ac451bb7b953f6b487bf10846ca69b7fba831880:Modules/helpdeskAD/function/Get-ADUsrSum.ps1
 
         .DESCRIPTION
             Longer description here
