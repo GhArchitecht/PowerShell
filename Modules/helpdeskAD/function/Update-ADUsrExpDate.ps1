@@ -1,6 +1,6 @@
-﻿function Set-ADUsrExprDate 
+﻿function Update-ADUsrExprDate 
 {
-    [CmdletBinding()]
+
         param (
         $usr
         )
@@ -26,7 +26,7 @@
         $usr = Get-ADUser -identity $usr -Properties AccountExpirationDate
 
         #Adds a year to users account expiration date 
-        $newExp = $usr.AccountExpirationDate.AddDays(365)
+        $newExp = $usr.AccountExpirationDate.AddYears(1)
 
         #Sets a users expiration date 
         Set-ADAccountExpiration -Identity $usr -DateTime $newExp
