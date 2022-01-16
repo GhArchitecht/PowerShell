@@ -45,4 +45,6 @@
 
     
       Get-ADUser -identity $usr -Properties * | Format-List Name, @{N='Manager';E={(Get-ADUser $_.Manager).SamAccountName}}
+
+      
 }

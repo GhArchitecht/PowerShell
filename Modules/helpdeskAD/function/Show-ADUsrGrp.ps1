@@ -43,5 +43,12 @@
             return $null
           }
 
-    Get-ADPrincipalGroupMembership $usr | Select-Object name
+    $GroupList =  Get-ADPrincipalGroupMembership $usr | Select -ExpandProperty name
+
+
+    foreach ($list in $GroupList) {
+
+         Write-Host $list
+        
+    }
 }

@@ -1,6 +1,29 @@
 ﻿function Set-ADUsrExpDate 
 {
+<#
+    .SYNOPSIS
+        modifies AD manager 
 
+    .DESCRIPTION
+        modifies a specified ADuser's manager.
+
+    .PARAMETER $usr
+        a [string] specifying the AD user.
+
+    .PARAMETER $mgr
+         a [string] specifying the AD manager.
+        
+    .INPUT
+        This function does not support piping.
+
+    .OUTPUT
+        returns the user specified and their updated manager informati
+
+    .EXAMPLE
+        Set-ADUsrMgr -usr $username -mgr $managername
+    #>
+
+    [cmdletBinding()]
         param (
         $usr, [DateTime]$newExpDate
         )

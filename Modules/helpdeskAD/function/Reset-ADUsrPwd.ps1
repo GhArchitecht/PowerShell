@@ -47,7 +47,7 @@
          Add-Type -AssemblyName 'System.Web'
 
          # Generate a random password that is 12-characters long with five non-AlphaNumeric characters.
-         $randomPassword = [System.Web.Security.Membership]::GeneratePassword(12, 5)
+         $randomPassword = [System.Web.Security.Membership]::GeneratePassword(10, 1)
  
          # Convert the plain text password to a secure string.
          $newPassword = $randomPassword | ConvertTo-SecureString -AsPlainText -Force
