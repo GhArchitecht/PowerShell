@@ -3,7 +3,28 @@ This repository contains powershell helper functions to query and manage day to 
 
 ## Modules
 
-   ### helpdeskAD
+<table>
+    <thead>
+        <tr>
+           <th>Layer 1</th>
+           <th>Layer 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>L1 Name</td>
+       </tr>
+        <tr>
+            <td rowspan=2>L2 Name B</td>
+            <td>L3 Name C</td>
+        </tr>
+        <tr>
+            <td>L3 Name D</td>
+        </tr>
+    </tbody>
+</table>
+
+ ### helpdeskAD
    - BoolToYesNo.ps1
    - Disable-ADUser.ps1
    - Enable-ADUser.ps1
@@ -22,26 +43,6 @@ This repository contains powershell helper functions to query and manage day to 
    - Undo-ADUsrExpDate.ps1
    - Update-ADUsrExpDate.ps1
    - Update-ADUsrMgr.ps1
-
-<table>
-    <thead>
-        <tr>
-           <th>Layer 1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=4>L1 Name</td>
-       </tr>
-        <tr>
-            <td rowspan=2>L2 Name B</td>
-            <td>L3 Name C</td>
-        </tr>
-        <tr>
-            <td>L3 Name D</td>
-        </tr>
-    </tbody>
-</table>
 
 ### helpdeskLocal
    - 
