@@ -17,7 +17,7 @@ This repository contains powershell helper functions to query and manage day to 
             <td>L1 Name</td>
        </tr>
         <tr>
-            <td rowspan=2>L2 Name B</td>
+            <td>L2 Name B</td>
         </tr>
     </tbody>
 </table>
