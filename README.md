@@ -24,10 +24,12 @@ This repository contains powershell helper functions to query and manage day to 
    - Update-ADUsrMgr.ps1
 
 ### helpdeskLocal
-   - Get-PCInfo.ps1
-
-| Syntax | Description |
+   - 
+| Modules |
+| helpdeskAD | helpdeskLocal |
 | ----------- | ----------- |
+| ----------- | ### helpdeskLocal |
+| ----------- |  Get-PCInfo.ps1 |
 
 
 #### To install
