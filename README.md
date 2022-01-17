@@ -16,10 +16,6 @@ This repository contains powershell helper functions to query and manage day to 
        </tr>
         <tr>
             <td rowspan=2>L2 Name B</td>
-            <td>L3 Name C</td>
-        </tr>
-        <tr>
-            <td>L3 Name D</td>
         </tr>
     </tbody>
 </table>
