@@ -6,12 +6,14 @@ This repository contains powershell helper functions to query and manage day to 
 <table>
     <thead>
         <tr>
-           <th>Layer 1</th>
-           <th>Layer 2</th>
+           <th>helpdeskAD</th>
+           <th>helpdeskLocal</th>
         </tr>
     </thead>
     <tbody>
         <tr>
+            <td rowspan=4>L1 Name</td>
+            <td rowspan=4>L1 Name</td>
             <td rowspan=4>L1 Name</td>
        </tr>
         <tr>
