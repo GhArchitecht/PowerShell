@@ -13,7 +13,7 @@ This repository contains powershell helper functions to query and manage day to 
     <tbody>
         <tr>
             <td>L1 Name</td>
-            <td>L1 Name</td>    
+            <td>Get-PCInfo.ps1</td>    
        </tr>
         <tr>
             <td>L1 Name</td>
@@ -50,13 +50,6 @@ This repository contains powershell helper functions to query and manage day to 
    - Update-ADUsrExpDate.ps1
    - Update-ADUsrMgr.ps1
 
-### helpdeskLocal
-   - 
-| Modules ||
-| helpdeskAD | helpdeskLocal |
-| ----------- | ----------- |
-| ----------- | ### helpdeskLocal |
-| ----------- |  Get-PCInfo.ps1 |
 
 
 #### To install
