@@ -1,10 +1,5 @@
 ﻿<#
-    This code is for demonstration only and should not be used in production. 
-#>
-<#
 
-.Author
-   Bryan Cafferky
 .SYNOPSIS
     A simple module that uses dot sourcing to load the functions.
 .DESCRIPTION
