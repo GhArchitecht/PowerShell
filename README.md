@@ -25,7 +25,7 @@ This repository contains powershell helper functions to query and manage day to 
 
 ### helpdeskLocal
    - 
-| Modules |
+| Modules ||
 | helpdeskAD | helpdeskLocal |
 | ----------- | ----------- |
 | ----------- | ### helpdeskLocal |
