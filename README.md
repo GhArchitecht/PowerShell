@@ -13,18 +13,18 @@ This repository contains powershell helper functions to query and manage day to 
     <tbody>
         <tr>
             <td>L1 Name</td>
-            <td>L1 Name</td>
-            <td>L1 Name</td>
-            <td>L1 Name</td>
-            <td>L1 Name</td>
+            <td>L1 Name</td>    
        </tr>
         <tr>
+            <td>L1 Name</td>
             <td>L2 Name B</td>
         </tr>
         <tr>
+            <td>L1 Name</td>
             <td>L2 Name B</td>
         </tr>
         <tr>
+            <td>L1 Name</td>
             <td>L2 Name B</td>
         </tr>
     </tbody>
