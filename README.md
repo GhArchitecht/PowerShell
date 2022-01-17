@@ -12,44 +12,62 @@ This repository contains powershell helper functions to query and manage day to 
     </thead>
     <tbody>
         <tr>
-            <td>L1 Name</td>
-            <td>Get-PCInfo.ps1</td>    
-       </tr>
-        <tr>
-            <td>L1 Name</td>
-            <td>L2 Name B</td>
+            <td>BoolToYesNo</td>
+            <td>Get-PCInfo</td>
         </tr>
         <tr>
-            <td>L1 Name</td>
-            <td>L2 Name B</td>
+            <td>Disable-ADUser</td>
         </tr>
         <tr>
-            <td>L1 Name</td>
-            <td>L2 Name B</td>
+            <td>Enable-ADUser</td>
+        </tr>
+         <tr>
+            <td>Find-ADUser2</td>
+        </tr> 
+        <tr>
+            <td>Get-ADGroupManagers</td>   
+        </tr>
+        <tr>
+            <td>Get-ErrorMessage</td>
+        </tr>
+        <tr>
+            <td>Get-Template</td>
+        </tr> 
+        <tr>
+            <td>New-randomPassword</td>
+        </tr>
+        <tr>
+            <td>Reset-ADUsrPwd</td>
+        </tr>
+        <tr>
+            <td>Set-ADUsrExpDate</td>
+        </tr>
+        <tr>
+            <td>Show-ADUsr</td>
+        </tr>
+        <tr>
+            <td>Show-ADUsrGrp</td>
+        </tr>
+         <tr>
+            <td>Show-ADUsrMgr</td>
+        </tr>
+        <tr>
+            <td>Show-ADUsrSum</td>
+        </tr>
+        <tr>
+            <td>Show-UsrInfo</td>
+        </tr>
+        <tr>
+            <td>Undo-ADUsrExpDate</td>
+        </tr>
+        <tr>
+            <td>Update-ADUsrExpDate</td>
+        </tr>
+        <tr>
+            <td>Update-ADUsrMgr</td>
         </tr>
     </tbody>
 </table>
-
- ### helpdeskAD
-   - BoolToYesNo.ps1
-   - Disable-ADUser.ps1
-   - Enable-ADUser.ps1
-   - Find-ADUser2.ps1
-   - Get-ADGroupManagers.ps1
-   - Get-ErrorMessage.ps1
-   - Get-Template.ps1
-   - New-randomPassword.ps1
-   - Reset-ADUsrPwd.ps1
-   - Set-ADUsrExpDate.ps1
-   - Show-ADUsr.ps1
-   - Show-ADUsrGrp.ps1
-   - Show-ADUsrMgr.ps1
-   - Show-ADUsrSum.ps1
-   - Show-UsrInfo.ps1
-   - Undo-ADUsrExpDate.ps1
-   - Update-ADUsrExpDate.ps1
-   - Update-ADUsrMgr.ps1
-
 
 
 #### To install
