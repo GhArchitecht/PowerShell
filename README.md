@@ -3,6 +3,8 @@ This repository contains powershell helper functions to query and manage day to 
 
 ## Modules
 
+Below are the available modules and list of functions under each module.
+
 <table>
     <thead>
         <tr>
