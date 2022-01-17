@@ -1,8 +1,9 @@
 # PowerShell
 This repository contains powershell helper functions to query and manage day to day tasks in Active Director(helpdeskAD) and also collect Computer System Information(helpdeskLocal).
 
+## Module Names
 
-## helpdeskAD
+   ### helpdeskAD
    - BoolToYesNo.ps1
    - Disable-ADUser.ps1
    - Enable-ADUser.ps1
@@ -23,12 +24,12 @@ This repository contains powershell helper functions to query and manage day to 
    - Update-ADUsrMgr.ps1
 
 
-## helpdeskLocal
+### helpdeskLocal
    
    - Get-PCInfo.ps1
 
 
-### To install
+#### To install
 
 ```powershell
 Install-Module -Name ModuleName -AllowClobber  -Force
@@ -36,7 +37,7 @@ Install-Module -Name ModuleName -AllowClobber  -Force
 
 Force and AllowClobber aren't necessary, but they do skip errors in case some appear.
 
-### And to update
+#### And to update
 
 ```powershell
 Update-Module -Name ModuleName
