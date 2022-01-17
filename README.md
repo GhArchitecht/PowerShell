@@ -12,7 +12,9 @@ This repository contains powershell helper functions to query and manage day to 
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>L1 Name</td>
+            <td>L1 Name</td>
+            <td>L1 Name</td>
+            <td>L1 Name</td>
             <td>L1 Name</td>
             <td>L1 Name</td>
        </tr>
