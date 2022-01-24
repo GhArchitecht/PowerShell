@@ -1,10 +1,10 @@
     filter BoolToYesNo {
         if($_ -is [bool]){
-          $_ = @('No','Yes')[$_]
+          $_ = @("No","Yes")[$_]
         }
         return $_
 
         else {
-        return 'No  info'
+        return 'No  information entered'
       }
     }

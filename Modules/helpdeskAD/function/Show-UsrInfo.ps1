@@ -1,6 +1,10 @@
 function Show-UsrInfo
 {
-     <#
+    [CmdletBinding()]
+        param (
+            [string]$usr
+        )
+    <#
     .SYNOPSIS
         Shows a custom profile for one or more Active Directory users.
 
@@ -20,10 +24,7 @@ function Show-UsrInfo
         PS> Show-UsrInfo -$usr JDoe
     #>
   
-    [CmdletBinding()]
-        param (
-            [string]$usr
-        )
+    
     
         #If the user did not provide a username, show a a message and exit the script
         if (-not($usr)) 
@@ -58,14 +59,20 @@ function Show-UsrInfo
         $UserAccountExpiredDate = $UserProperties.AccountExpirationDate
         $CurrentDate = Get-Date
 
+       
         #Checks if a users account has expired or not expired
         $UserAccountExpiredDateResults = If ($UserAccountExpiredDate -lt $CurrentDate -and  -not($UserAccountExpiredDate -eq $null))
                                             {  
-                                                'Account expired!!! ' + '' + $UserAccountExpiredDate
+                                                "Account expired " + $UserAccountExpiredDate
                                             }
-                                            else {
-                                                'Account is active and expires on ' +  $UserAccountExpiredDate
+                                            elseif ($UserAccountExpiredDate -eq $null){
+                                                "Account is active and set to never expire"
+
                                             }
+                                            else
+                                            {
+                                                "Account is active and expires on " +  $UserAccountExpiredDate
+                                             }
 
         $CalculatePasswordAge = New-TimeSpan -start $UserProperties.PasswordLastSet -end $CurrentDate
         $PasswordAge = "$($CalculatePasswordAge.Days) $("day(s) old")"
@@ -76,18 +83,18 @@ function Show-UsrInfo
             'Username:' = $UserProperties.SamAccountName
             'Email Address:' = $UserProperties.EmailAddress
             'Department:' = $UserProperties.Department
-            'Country' = $UserProperties.Country
+            'Country' = $UserProperties.Country | ChangeColor
             'Country 2' = $UserProperties.co
             'Employee Role' = $UserProperties.EmployeeType
             'Title' = $UserProperties.Title
             'Manager' = $newUserManagerName
             'Managers Username' = $newUserManager.SamAccountName
             'Account Created on ' = $UserProperties.Created
-            'Account Enabled' = $UserProperties.Enabled | BoolToYesNo
-            'Account Locked out' = $UserProperties.lockedout | BoolToYesNo
-            'Account Expiration Date' = $UserAccountExpiredDateResults 
-            'Password Last Set' = $UserProperties.PasswordLastSet
-            'Password Age:' = $PasswordAge 
+            'Account Enabled' = $UserProperties.Enabled | BoolToYesNo 
+            'Account Locked out' = $UserProperties.lockedout | BoolToYesNo | ChangeColor
+            'Account Expiration Date' = $UserAccountExpiredDateResults | ChangeColor
+            'Password Last Set' = $UserProperties.PasswordLastSet 
+            'Password Age:' = $PasswordAge
             'Password set to  never expire' = $UserProperties.PasswordNeverExpires  | BoolToYesNo
             'Last Bad Password Set' = $UserProperties.LastBadPasswordattempt 
          }
