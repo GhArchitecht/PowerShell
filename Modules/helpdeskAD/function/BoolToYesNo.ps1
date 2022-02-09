@@ -5,6 +5,6 @@
         return $_
 
         else {
-        return 'No  information entered'
+        return 'no variable received'
       }
     }

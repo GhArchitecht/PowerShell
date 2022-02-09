@@ -63,7 +63,7 @@ function Show-UsrInfo
         #Checks if a users account has expired or not expired
         $UserAccountExpiredDateResults = If ($UserAccountExpiredDate -lt $CurrentDate -and  -not($UserAccountExpiredDate -eq $null))
                                             {  
-                                                "Account expired " + $UserAccountExpiredDate
+                                                "Account expired!!! " 
                                             }
                                             elseif ($UserAccountExpiredDate -eq $null){
                                                 "Account is active and set to never expire"
@@ -93,10 +93,10 @@ function Show-UsrInfo
             'Account Enabled' = $UserProperties.Enabled | BoolToYesNo 
             'Account Locked out' = $UserProperties.lockedout | BoolToYesNo | ChangeColor
             'Account Expiration Date' = $UserAccountExpiredDateResults | ChangeColor
-            'Password Last Set' = $UserProperties.PasswordLastSet 
             'Password Age:' = $PasswordAge
             'Password set to  never expire' = $UserProperties.PasswordNeverExpires  | BoolToYesNo
             'Last Bad Password Set' = $UserProperties.LastBadPasswordattempt 
+            'Password Last Set' = $UserProperties.PasswordLastSet 
          }
 
     Write-Output $ProfileInfo | FL
