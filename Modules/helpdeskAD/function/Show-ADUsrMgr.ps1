@@ -22,6 +22,7 @@
 
       [CmdletBinding()]
       param (
+        [Parameter(ValueFromPipelineByPropertyName)]
           [string]$usr
           )
 

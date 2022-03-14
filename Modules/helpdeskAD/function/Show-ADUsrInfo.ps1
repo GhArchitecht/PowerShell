@@ -1,4 +1,4 @@
-function Show-UsrInfo
+function Show-ADUsrInfo
 {
     [CmdletBinding()]
         param (
@@ -24,8 +24,6 @@ function Show-UsrInfo
         PS> Show-UsrInfo -$usr JDoe
     #>
   
-    
-    
         #If the user did not provide a username, show a a message and exit the script
         if (-not($usr)) 
         {
@@ -55,10 +53,8 @@ function Show-UsrInfo
         #Gets the users manager first and last name
         $newUserManagerName = $newUserManager.GivenName + " " + $newUserManager.Surname
 
-
         $UserAccountExpiredDate = $UserProperties.AccountExpirationDate
         $CurrentDate = Get-Date
-
        
         #Checks if a users account has expired or not expired
         $UserAccountExpiredDateResults = If ($UserAccountExpiredDate -lt $CurrentDate -and  -not($UserAccountExpiredDate -eq $null))
@@ -76,7 +72,6 @@ function Show-UsrInfo
 
         $CalculatePasswordAge = New-TimeSpan -start $UserProperties.PasswordLastSet -end $CurrentDate
         $PasswordAge = "$($CalculatePasswordAge.Days) $("day(s) old")"
-
 
         $ProfileInfo = [PSCustomObject]@{
             'Full Name:' = $UserProperties.GivenName + ", " + $UserProperties.Surname

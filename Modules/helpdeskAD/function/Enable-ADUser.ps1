@@ -1,7 +1,4 @@
-﻿<#
-
-#>
-function Enable-ADUsr 
+﻿function Enable-ADUsr 
 {
     [CmdletBinding()]
     
@@ -30,10 +27,8 @@ function Enable-ADUsr
         #Enable users account
         Enable-ADAccount -Identity $usr
 
-
         #Checks the value of the Enabled property of a user
          $result = Get-Aduser $usr -Properties Enabled | Select-Object -ExpandProperty Enabled
-
 
          #if value is false, show message and exit the script
           if ($result -eq $true) {

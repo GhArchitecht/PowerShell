@@ -43,6 +43,9 @@
              return $null
          }
 
+         #Check if the specified users account is expired
+         Get-UsrAccountStatus $usr
+
          # Import the System.Web .NET assembly
          Add-Type -AssemblyName 'System.Web'
 
@@ -61,7 +64,7 @@
              Set-ADuser -Identity $usr -ChangePasswordAtLogon $true
 
              #Gets the users account name and password last set
-             $passwordSet = Get-ADUser -identity $usr -Properties * | Select-Object PasswordLastSet
+             $passwordSet = Get-ADUser -identity $usr -Properties * | Select-Object -ExpandProperty PasswordLastSet
      
              # If the password reset was successfull, return the username and new password.
              [ pscustomobject ]@{
